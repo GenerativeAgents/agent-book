@@ -37,6 +37,23 @@
 
 Python パッケージの動作確認済みバージョンは、各章のディレクトリの requirements.txt を参照してください。
 
+### 新しく環境を作る際のCA証明書の更新
+
+2026年10月の [eMudhra / emSign CA証明書の問題に関するPython公式告知](https://discuss.python.org/t/information-for-python-users-regarding-emudhra-emsign-ca-certificate-security-incident/109576) に対応し、各章の certifi を `2026.10.19` に更新しています。pip 自身もCA証明書を内蔵するため、アプリケーションの certifi とは別に更新します。
+
+Google Colab では、新しいランタイムで各ノートブック冒頭の「パッケージ導入前の準備」を実行してから、章のコードを順に実行してください。このセルは、公式告知のSHA-256付きURLから pip `26.2.2` を導入し、certifi `2026.10.19` をインストールします。途中から再開する場合は、ランタイムを再起動して準備セルから実行してください。
+
+ローカルでは、OSのCA証明書を本問題の対応版に更新したうえで、Python 3.10〜3.12 の新しい仮想環境内で次を実行してください。
+
+```bash
+python -m pip --disable-pip-version-check install --upgrade --no-deps "pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70"
+python -m pip install --upgrade --no-deps certifi==2026.10.19
+```
+
+続いて、実行する章のノートブックの `pip install` セルに示すパッケージを同じバージョンで導入してください。requirements.txt はColab環境全体の記録であり、Colab内にしかない `file:///colabtools/...` やPython・GPU固有のwheelを含むため、任意のローカル環境での一括導入には使えません。第10章・第12章をPoetryで導入する場合は、更新済みの `pyproject.toml` と `poetry.lock` を一緒に使用し、各章のディレクトリで `poetry install --no-root` を実行してください。
+
+certifi 以外の既存依存バージョンは変更していません。上記の動作確認環境は刊行時の記録であり、現在のColab全体や全サンプルの再検証結果ではありません。
+
 ## 既知のエラー
 
 ### Python パッケージのバージョンに起因するエラー

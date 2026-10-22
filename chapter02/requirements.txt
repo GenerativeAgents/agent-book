@@ -37,7 +37,7 @@ branca==0.8.1
 CacheControl==0.14.1
 cachetools==5.5.0
 catalogue==2.0.10
-certifi==2024.12.14
+certifi==2026.10.19
 cffi==1.17.1
 chardet==5.2.0
 charset-normalizer==3.4.0
