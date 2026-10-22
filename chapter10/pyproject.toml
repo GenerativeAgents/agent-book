@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
+certifi = "2026.10.19"
 langchain-core = "^0.3.0"
 langchain-openai = "^0.2.0"
 langgraph = "^0.2.22"

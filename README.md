@@ -28,14 +28,15 @@
 | 第 11 章 エージェントデザインパターン                               | -                                                                                                                                                                                     |
 | 第 12 章 LangChain/LangGraph で実装するエージェントデザインパターン | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GenerativeAgents/agent-book/blob/main/chapter12/notebook.ipynb) |
 
-## 動作確認環境
+## 刊行時の動作確認環境
 
-本書のソースコードは以下の環境・バージョンで動作確認しました。
+本書の刊行時には、以下の環境・バージョンでソースコードを動作確認しました。
 
 - Google Colab
 - Python 3.10.12
 
-Python パッケージの動作確認済みバージョンは、各章のディレクトリの requirements.txt を参照してください。
+一部ライブラリのバージョンアップのため、2026年10月22日にPython 3.12で追加検証を行いました。ColabではPython 3.12のランタイムを選び、各ノートブックの準備セルから順に実行してください。
+環境設定、2026年10月の更新内容と検証結果は[環境更新とColab検証](docs/20261022-colab-validation/README.md)を参照してください。
 
 ## 既知のエラー
 
