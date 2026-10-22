@@ -41,7 +41,7 @@ Python パッケージの動作確認済みバージョンは、各章のディ�
 
 2026年10月の [eMudhra / emSign CA証明書の問題に関するPython公式告知](https://discuss.python.org/t/information-for-python-users-regarding-emudhra-emsign-ca-certificate-security-incident/109576) に対応し、各章の certifi を `2026.10.19` に更新しています。pip 自身もCA証明書を内蔵するため、アプリケーションの certifi とは別に更新します。
 
-Google Colab では、本書の固定依存に合わせて Python 3.10〜3.12 のランタイムを使います。2026年10月22日に確認した標準ランタイムは Python 3.13 であり、本書で固定している numpy `1.26.4` や faiss-cpu `1.8.0.post1` の対応wheelがありません。「ランタイム」→「ランタイムのタイプを変更」→「ランタイムのバージョン」で、Python 3.12 を含む過去の版（例: `2026.07`）を選択してください。利用できる版は [Colab公式の一覧](https://research.google.com/colaboratory/runtime-version-faq.html) を確認してください。過去の版の提供期間は公開から1年間です。
+各ノートブックを上から実行すると、インストールセルで指定したバージョンのパッケージが導入されます。これらに合わせ、Google Colab では Python 3.12 のランタイムを選んでください。2026年10月22日に確認した標準ランタイムは Python 3.13 であり、第6・7・12章のセルで指定している numpy `1.26.4` や faiss-cpu `1.8.0.post1` の対応wheelがありません。「ランタイム」→「ランタイムのタイプを変更」→「ランタイムのバージョン」で、Python 3.12 を含む過去の版（例: `2026.07`）を選択してください。利用できる版は [Colab公式の一覧](https://research.google.com/colaboratory/runtime-version-faq.html) を確認してください。過去の版の提供期間は公開から1年間です。
 
 新しいランタイムで各ノートブック冒頭の「パッケージ導入前の準備」を実行してから、章のコードを順に実行してください。このセルは、公式告知のSHA-256付きURLから pip `26.2.2` を導入し、certifi `2026.10.19` をインストールします。途中から再開する場合は、ランタイムを再起動して準備セルから実行してください。
 
