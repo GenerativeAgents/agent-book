@@ -84,7 +84,7 @@ Colab CLI `0.7.5` で新しいCPUランタイムを作成し、その中の独�
 
 実行したのはライブラリの読み込み、クライアントの生成、APIを呼ばないLCEL・LangGraph処理、グラフ描画、FAISS検索などです。外部AI API、Colabのシークレット・Drive・ウィジェット、ノートブック全体の実行、過去ランタイム `2026.07` のイメージ自体は未検証です。OS側のCAストアによる事故対応の判定も含みません。
 
-[詳細結果](validation/colab-20261022/results.json) と [各環境で生成したrequirements](validation/colab-20261022/requirements) を保存しています。requirementsは不整合を含む観測記録であり、配布用の依存定義として置き換えたものではありません。
+[詳細結果](docs/20261022-colab-validation/results.json) と [各環境で生成したrequirements](docs/20261022-colab-validation/requirements) を保存しています。requirementsは不整合を含む観測記録であり、配布用の依存定義として置き換えたものではありません。
 
 ## 既知のエラー
 
